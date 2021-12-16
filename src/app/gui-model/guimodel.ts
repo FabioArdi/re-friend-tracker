@@ -160,6 +160,40 @@ export class GuiModel {
                     }
                     ]
                    },
+                   {
+                    "id": "ActivityForm",
+                    "title": "Activity",
+                    "url": "/activity",
+                    "formFieldList": [
+                    {
+                        "id": "name",
+                        "type": "text",
+                        "name": "Activity",
+                        "width": 2,
+                        "required": true
+                    },
+                    {
+                        "id":   "location",
+                        "type": "autocomplete",
+                        "name": "Location",
+                        "url": "/location",
+                        "form": "LocationForm",
+                        "width": 2
+                    },
+                    {
+                    "type": "deleteButton",
+                    "name": "Delete"
+                    },
+                    {
+                    "type": "cancelButton",
+                    "name": "Cancel"
+                    },
+                    {
+                    "type": "okButton",
+                    "name": "Ok"
+                    }
+                    ]
+                   },
                    
             ],
             "pageList": [
@@ -276,7 +310,7 @@ export class GuiModel {
                         "form": {
                         "form": "GroupForm"
                         }
-                        }
+                    }
                     ]
                 },
                 {
@@ -301,7 +335,7 @@ export class GuiModel {
                         "search": true,
                         "url": "/activity",
                         "form": {
-                        "form": "LocationForm"
+                        "form": "ActivityForm"
                         }
                         }
                     ]
