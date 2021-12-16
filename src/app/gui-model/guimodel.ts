@@ -256,6 +256,23 @@ export class GuiModel {
                                 "form": "FriendForm"
                             }
                         },
+                        {
+                            "type": "button",
+                            "name": "test",
+                            "icon": "fa-user",
+                            "color": "blue",
+                            "search": true,
+                            "url": "/friend/editfriendpage",
+                            "page": "editfriendpage",
+                        },
+                    ]
+                },
+                {
+                    "id": "editfriendpage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
                     ]
                 },
                 {
