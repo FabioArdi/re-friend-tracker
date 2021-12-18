@@ -283,12 +283,12 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/friend",
-                            "page": "editfriendpage"
+                            "page": "friendfocuspage"
                         },
                     ]
                 },
                 {
-                    "id": "editfriendpage",
+                    "id": "friendfocuspage",
                     "elementList": [
                         {
                             "type": "backbutton",
@@ -339,14 +339,38 @@ export class GuiModel {
                         },
                         {
                             "type": "list",
-                            "icon": "fa-home",
+                            "icon": "fa-user",
                             "color": "blue",
                             "search": true,
                             "url": "/location",
+                            "page": "locationfocuspage"
+                        },
+                    ]
+                },
+                {
+                    "id": "locationfocuspage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditLocation",
+                            "icon": "fa-cubes",
                             "form": {
                                 "form": "LocationForm"
                             }
                         },
+                        {
+                            "type": "list",
+                            "icon": "fa-calendar",
+                            "color": "orange",
+                            "search": true,
+                            "url": "/location/:locationKey/activity",
+                            "form": {
+                            "form": "ActivityForm"
+                            }
+                        }
                     ]
                 },
                 {
@@ -393,17 +417,40 @@ export class GuiModel {
                     },
                     {
                         "type": "list",
-                        "icon": "fa-calendar",
-                        "color": "orange",
+                        "icon": "fa-skiing",
+                        "color": "blue",
                         "search": true,
                         "url": "/activity",
-                        "form": {
-                        "form": "ActivityForm"
-                        }
-                    }
+                        "page": "activityfocuspage"
+                    },
                     ]
-                }
-                
+                },
+                {
+                    "id": "activityfocuspage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditActivity",
+                            "icon": "fa-skiing",
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "orange",
+                            "search": true,
+                            "url": "/activity/:activityKey/friend",
+                            "form": {
+                            "form": "FriendForm"
+                            }
+                        }
+                    ]
+                }               
             ]
         }
     };
