@@ -242,7 +242,7 @@ export class GuiModel {
                         {
                             "type": "button",
                             "name": "Location",
-                            "icon": "fa-cubes",
+                            "icon": "fa-home",
                             "color": "yellow",
                             "page": "locationspage",
                         },
@@ -356,7 +356,7 @@ export class GuiModel {
                         {
                             "type": "button",
                             "name": "EditLocation",
-                            "icon": "fa-cubes",
+                            "icon": "fa-home",
                             "form": {
                                 "form": "LocationForm"
                             }
